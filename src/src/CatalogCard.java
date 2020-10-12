@@ -9,7 +9,7 @@ package src;
  *
  * @author 1styrGroupC
  */
-public class CatalogCard {
+public class CatalogCard implements Comparable<CatalogCard> {
 
     private String cardId;
     private String bookTitle;
@@ -55,6 +55,11 @@ public class CatalogCard {
 
     public void setPublisher(String publisher) {
         this.publisher = publisher;
+    }
+
+    @Override
+    public int compareTo(CatalogCard o) {
+        return this.getCardId().compareTo(o.getCardId());
     }
 
 }

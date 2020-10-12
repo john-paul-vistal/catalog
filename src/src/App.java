@@ -6,7 +6,7 @@
 package src;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -49,13 +49,14 @@ public class App {
 
     }
 
+    //edit card 
     public void editCard() {
         if (!catalog.isEmpty()) {
             System.out.print("Enter the Card ID: ");
             String id = scan.nextLine();
             catalog.forEach((card) -> {
                 if (card.getCardId().equals(id)) {
-                    
+                    System.out.println("\n-----UPDATE CARD CATALOG INFORMATION-----");
                     System.out.print("Update Card ID: ");
                     card.setCardId(scan.nextLine());
                     System.out.print("Update Book Title: ");
@@ -66,9 +67,9 @@ public class App {
                     card.setYearPublished(scan.nextLine());
                     System.out.print("Update Publisher: ");
                     card.setPublisher(scan.nextLine());
-                    
-                    catalog.set(catalog.indexOf(card),card);
-                    
+
+                    catalog.set(catalog.indexOf(card), card);
+
                     System.out.println("\nCard Updated Successfully!\n");
                 }
             });
@@ -77,6 +78,7 @@ public class App {
         }
     }
 
+    //remove card from list
     public void removeCard() {
         if (!catalog.isEmpty()) {
             System.out.print("Enter the Card ID: ");
@@ -124,10 +126,11 @@ public class App {
         }
 
     }
-//Display all card
 
+//Display all card
     public void displayAll() {
         if (!catalog.isEmpty()) {
+            Collections.sort(catalog);
             catalog.forEach((card) -> {
                 System.out.println("");
                 System.out.println("Card ID: " + card.getCardId());
@@ -135,7 +138,6 @@ public class App {
                 System.out.println("Book Author: " + card.getBookAuthor());
                 System.out.println("Year Published: " + card.getYearPublished());
                 System.out.println("Publisher: " + card.getPublisher());
-                System.out.println("");
             });
         } else {
             System.out.println("\nCard Catalog is Empty!\n");

@@ -35,8 +35,6 @@ public class main {
                         case "2"://Display All Card Catalog
                             app.displayAll();
                             break;
-                        case "0"://Cancel
-                            break;
                         default:
                             System.out.println("\nInvalid Input\n");
                     }
