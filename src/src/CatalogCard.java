@@ -57,6 +57,7 @@ public class CatalogCard implements Comparable<CatalogCard> {
         this.publisher = publisher;
     }
 
+    //This is used to sort the cards
     @Override
     public int compareTo(CatalogCard o) {
         return this.getCardId().compareTo(o.getCardId());

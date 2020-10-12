@@ -17,7 +17,8 @@ public class App {
 
     ArrayList<CatalogCard> catalog = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
-
+    
+    //menu
     public String choice() {
         System.out.println("--------------------------Library Catalog System--------------------------");
         System.out.println("Choose what do you want to do \n   "
@@ -139,6 +140,7 @@ public class App {
                 System.out.println("Year Published: " + card.getYearPublished());
                 System.out.println("Publisher: " + card.getPublisher());
             });
+            System.out.println("");
         } else {
             System.out.println("\nCard Catalog is Empty!\n");
         }

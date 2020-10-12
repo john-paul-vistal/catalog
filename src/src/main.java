@@ -5,7 +5,6 @@
  */
 package src;
 
-import java.util.Scanner;
 
 /**
  *
@@ -14,7 +13,6 @@ import java.util.Scanner;
 public class main {
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
         App app = new App();
         while (true) {
             switch (app.choice()) {
